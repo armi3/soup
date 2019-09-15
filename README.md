@@ -1,5 +1,5 @@
 
-# web scrapping 101
+# web scraping 101
 
 In this project we will understand the DOM and interact with it, we will learn and assure HTML and some python best practices like requirements.txt and pip.
 
