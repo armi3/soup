@@ -43,7 +43,23 @@ def portal():
 
 
 def studies():
-    pass
+    souped_html_content = soup_html_content("http://ufm.edu/Estudios")
+    print("\nUpper nav menu items:")
+    for item in souped_html_content.find(id="menu-table").find_all(class_="menu-key"):
+        print(" ▫️ ", item.text.strip())
+    print("\nAll studies:")
+    for study in souped_html_content.find_all(class_="estudios"):
+        print("\n ▫️ ", study.text.strip())
+        for sub_study in study.parent.parent.parent.parent.find_all('div')[0].find_all('a'):
+            print("     🔸️ ", sub_study.text.strip())
+    print("\nAll left bar <li> items:")
+    for li_item in souped_html_content.find_all('li'):
+        print(" ▫️ ", li_item.text.strip())
+    print("\nAll social media hrefs:")
+    for link in souped_html_content.find_all(class_="social pull-right")[0].find_all('a'):
+        print(" ▫️ ", link.get('href'))
+    print("\nCount of all <a>: ", len(souped_html_content.find_all('a')))
+
 
 def computer_science():
     souped_html_content = soup_html_content("https://fce.ufm.edu/carrera/cs/")
