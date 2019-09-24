@@ -87,11 +87,38 @@ def computer_science():
 
 
 def directory():
-    pass
+    souped_html_content = soup_html_content("https://www.ufm.edu/Directorio")
+    print("\nSorting and dumping email lists...")
+    emails = list()
+    count = 0
+    local_file = open('logs/directory_emails.txt', 'w+')
+    for i in souped_html_content.find_all(attrs={"href": True}):
+        if str(i['href']).__contains__("mailto"):
+            emails.append(str(i['href'].replace("mailto:", "")))
+    emails.sort()
+    for mail in emails:
+        local_file.write(mail + "\r\n")
+        if mail[0] in ['a', 'e', 'i', 'o', 'u']:
+            count += 1
+    print("\nCount of emails starting with any vowel: ", count)
+
+    # tables = list()
+    # for row in souped_html_content.find_all('table', class_="tabla ancho100"):
+    #     print(row.text)
+    #     tables.append(row.find_all('td'))
+    # print(tables)
+    # unified_table = list()
+    # for table in tables:
+    #     for item in table.find_all('a'):
+    #         print(item)
+    # print(unified_table)
 
 
 def run_all():
-    pass
+    portal()
+    studies()
+    computer_science()
+    directory()
 
 
 if len(sys.argv) == 1:
@@ -104,8 +131,3 @@ elif sys.argv[1] == 3:
     computer_science()
 elif sys.argv[1] == 4:
     directory()
-
-
-# soup_test = soup_html_content("http://ufm.edu/Portal")
-#portal()
-studies()
