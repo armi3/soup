@@ -1,4 +1,5 @@
 import json
+import shutil
 import sys
 from bs4 import BeautifulSoup
 import requests
@@ -44,9 +45,29 @@ def portal():
 def studies():
     pass
 
-
 def computer_science():
-    pass
+    souped_html_content = soup_html_content("https://fce.ufm.edu/carrera/cs/")
+    print("\nTitle:     ", souped_html_content.title.string)
+    print("\nProperties that have href's:")
+    for link in souped_html_content.find_all('a', attrs={'href': re.compile("^(https)|(http)")}):
+        print(" ▫️ ", link.get('href'))
+    print("\nDownloading FCE's logo...")
+    logo_url = souped_html_content.find_all(class_="fl-photo-img wp-image-500 size-full")[0]['src']
+    # Open the url image, set stream to True, this will return the stream content.
+    resp = requests.get(logo_url, stream=True)
+    # Open a local file with wb ( write binary ) permission.
+    local_file = open('local_image.jpg', 'wb')
+    # Set decode_content value to True, otherwise the downloaded image file's size will be zero.
+    resp.raw.decode_content = True
+    # Copy the response stream raw data to local image file.
+    shutil.copyfileobj(resp.raw, local_file)
+    # Remove the image url response object.
+    del resp
+    print("\nTitle and description of all <meta>:")
+    for meta in souped_html_content.find_all('meta', property={'og:title', 'og:description'}):
+        print(" ▫️ ", meta.get('content'))
+    print("\nCount of all <a>: ", len(souped_html_content.find_all('a')))
+    print("\nCount of all <div>: ", len(souped_html_content.find_all('div')))
 
 
 def directory():
@@ -70,4 +91,5 @@ elif sys.argv[1] == 4:
 
 
 # soup_test = soup_html_content("http://ufm.edu/Portal")
-portal()
+#portal()
+studies()

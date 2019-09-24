@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64d961fd-c07d-474f-8923-56d0706ed1ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/soup.py" beforeDir="false" afterPath="$PROJECT_DIR$/soup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,16 +11,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.56864655">
+    <splitter split-orientation="horizontal" split-proportion="0.5355404">
       <split-first>
         <leaf>
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/soup.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="269">
-                  <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+                <state relative-caret-position="117">
+                  <caret line="45" column="8" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
                   <folding>
                     <element signature="e#0#11#0" expanded="true" />
+                    <element signature="e#189#435#0" />
+                    <element signature="e#1660#2993#0" />
                   </folding>
                 </state>
               </provider>
@@ -89,11 +90,6 @@
               <item name="proyecto 2" type="b2602c69:ProjectViewProjectNode" />
               <item name="proyecto 2" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="proyecto 2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="proyecto 2" type="462c0819:PsiDirectoryNode" />
-              <item name="soup vscode" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -159,12 +155,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1569286710164</updated>
-      <workItem from="1569286713325" duration="7731000" />
+      <workItem from="1569286713325" duration="10098000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7731000" />
+    <option name="totallyTimeSpent" value="10098000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -202,7 +198,7 @@
     </ignored-roots>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/proyecto_2$soup.coverage" NAME="soup Coverage Results" MODIFIED="1569295494536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/proyecto_2$soup.coverage" NAME="soup Coverage Results" MODIFIED="1569297938435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/soup vscode/soup.py">
@@ -228,6 +224,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/local_image.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/soup vscode/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SECOND">
@@ -238,10 +237,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/soup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="117">
+          <caret line="45" column="8" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#189#435#0" />
+            <element signature="e#1660#2993#0" />
           </folding>
         </state>
       </provider>
