@@ -1,9 +1,9 @@
-import json
+import re
+import requests
 import shutil
 import sys
+
 from bs4 import BeautifulSoup
-import requests
-import re
 
 
 def soup_html_content(url):
